@@ -1,0 +1,108 @@
+
+<template name="layout">
+
+  <div class="container">
+    <div class="col-lg-7 col-lg-offset-2"  >
+      <div class="row w">
+        <div class="col-md-4">
+        <img href='{{pathFor 'blog'}}' src="http://savepic.net/6573587.png" alt="Image not found" height='70%' width='65%' class='avatar'/>
+
+          <ul class="nav nav-tabs nav-stacked" id="myTab">
+            <li class='active' ><a href="#about">About</a></li>
+            <li><a href="#profile">Profile</a> </li>
+            <li><a href="#blog">Blog</a></li>
+            <li> <a href="#portfolio">Portfolio</a></li>
+            <li> <a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--col md-4-->
+        <!--Content-->
+        <div class="col-md-8" >
+          <div class="tab-content">
+            <div class="tab-pane active" id='about'>
+              <h3>Tsyb Sergiy</h3>
+					  	<h5>Web Programist</h5>
+					  	<hr>
+					  	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					  	<p>Has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.</p>
+					  	<p class="pull-right red"><i class="icon-heart"></i></p>
+            </div>
+            <!-- tab 2 -->
+            <div class="tab-pane" id='profile'>
+              <h4 ><i class='fa fa-briefcase'></i> Job Experience</h4>
+            <p class="sm">
+              <grey>Black Tie Corp.</grey> | June 2013 - Actual.<br/>
+              <grey>Other Corp.</grey> | January 2011 - May 2013.<br/>
+            </p>
+
+            <h4><i class="fa fa-file-text"></i> Education</h4>
+            <p class="sm">
+              <grey>Web Designer</grey> | Greenville University.<br/>
+              <grey>Business Master</grey> | Loyal Univesrity.<br/>
+            </p>
+
+            <h4><i class="fa fa-trophy"></i> Awards</h4>
+            <p class="sm">
+              <grey>Best Web Design</grey> | Black Tie Site.<br/>
+              <grey>Designer of the Year</grey> | 2012.<br/>
+            </p>
+          </div> <!-- tab2 -->
+          <!-- Blog -->
+          <div class="tab-pane" id='blog'>
+            {{>yield}}
+
+          </div>
+          <!-- Tab 3 -->
+          <div class="tab-pane" id='portfolio'>
+          {{> portfolio}}
+          </div>
+          <!-- Tab Contacts -->
+          <div class="tab-pane" id='contact'>
+            <h4>Contact Information</h4>
+             <hr>
+             <div class="row">
+
+
+               <div class="col-md-10 col-md-offset-2">
+                 <p class="sm">
+                   <i class="fa fa-phone"></i> - +380 063 2368 369 <br/>
+                   <i class="fa fa-globe"></i> - site.com <br/>
+                   <i class="fa fa-envelope"></i> - tsyb.sergiy@gmail.com
+
+                 </p>
+               </div><!-- col-xs-6 -->
+             </div><!-- row -->
+
+             <h4>Social Links</h4>
+             <hr>
+             <div class="row">
+               <div class="col-md-6">
+                 <p class="sm">
+                   <i class="fa fa-facebook"></i> - Vicky.Wallberg <br/>
+                 <i class="fa fa-tumblr"></i> - Love-Vicky-Site
+                 </p>
+               </div><!-- col-xs-6 -->
+
+               <div class="col-md-6">
+                 <p class="sm">
+                   <i class="fa fa-dribbble"></i> - Vicoooria <br/>
+                 <i class="fa fa-twitter"></i> - @BlackTie_co
+                 </p>
+               </div><!-- col-md-6 -->
+
+             </div><!-- row -->
+
+           </div>
+          </div>
+        </div>
+      </div><!--row w-->
+    </div><!--col lg 6-->
+
+  </div><!--container-->
+
+  <script charset="utf-8">
+  $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+  </script>
+</template>
